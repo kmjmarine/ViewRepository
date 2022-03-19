@@ -28,6 +28,8 @@ final class RepositoryListViewController: UITableViewController {
         
         tableView.register(RepositoryListCell.self, forCellReuseIdentifier: "RepositoryListCell")
         tableView.rowHeight = 140
+        
+        self.fetchRepositories(of: self.organization)
     }
     
     @objc func refresh() {
